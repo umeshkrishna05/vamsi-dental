@@ -1,0 +1,171 @@
+/* src/components/Information.css */
+
+.info-section {
+  padding: 80px 20px;
+  background-color: #f4f7f6;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.info-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.info-header .section-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.info-header .section-description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.sub-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 50px 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #e0e6ed;
+  padding-bottom: 10px;
+}
+
+.inline-icon {
+  color: #2575fc;
+}
+
+/* --- INFO CARDS --- */
+.info-card {
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+}
+
+.highlight-card h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.highlight-card p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-icon {
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-icon {
+  background: #ebf3ff;
+  color: #2575fc;
+}
+
+.card-text h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.precautions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.precautions-grid ul {
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* --- PEDIATRIC TIMELINE --- */
+.pediatric-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+  align-items: center;
+  gap: 25px;
+  border-left: 4px solid #6a11cb;
+}
+
+.age-badge {
+  background: #ebf3ff;
+  color: #2575fc;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.timeline-content h4 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .precautions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .info-header .section-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,165 @@
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Doctors Container */
+.doctors-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.doctors-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: Single column for mobile */
+  gap: 20px;
+  justify-items: center; /* Centers the card horizontally */
+  margin-top: 40px;
+}
+
+/* --- MOBILE-FIRST PROFILE CARD --- */
+.doctor-profile-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 24px;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px; /* Prevents card from stretching too much on mobile */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f4f8;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Circular Doctor Image */
+.doctor-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.doctor-image-wrapper img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2575fc;
+  padding: 4px;
+  background: white;
+}
+
+.verify-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #2575fc;
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
+}
+
+/* Text Details */
+.doctor-details {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.doctor-details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.specialty-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(37, 117, 252, 0.1), rgba(106, 17, 203, 0.1));
+  color: #2575fc;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.experience-text {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+/* Action Button */
+.book-specialist-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  width: fit-content;
+}
+
+/* --- LAPTOP & DESKTOP ADJUSTMENTS --- */
+@media (min-width: 992px) {
+  .doctors-list {
+    /* Auto-fit creates columns, but 'center' keeps them from stretching too wide */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+    justify-content: center; 
+    gap: 40px;
+  }
+  
+  .doctor-profile-card {
+    flex-direction: column; /* Vertical layout for laptop */
+    text-align: center;
+    padding: 40px 30px;
+    max-width: 400px;
+    height: 100%;
+  }
+
+  .doctor-details {
+    text-align: center;
+  }
+
+  .doctor-image-wrapper img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+  }
+
+  .book-specialist-btn {
+    width: 100%; 
+    margin: 0 auto;
+  }
+
+  .doctor-profile-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: #2575fc;
+  }
+}

@@ -1,0 +1,225 @@
+/* --- General Section Reset --- */
+.hospital-section {
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fbfd;
+  overflow-x: hidden;
+}
+
+.hospital-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+}
+
+/* --- LEFT SIDE --- */
+.hospital-left {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.section-description {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hospital-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.hospital-features li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.hospital-features span {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* --- RIGHT SIDE (Image Gallery) --- */
+.hospital-right {
+  flex: 1;
+}
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.img-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* --- FACILITIES SHOWCASE --- */
+.facilities-showcase {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding-top: 40px;
+  border-top: 1px solid #e0e6ed;
+}
+
+.facilities-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.facilities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.facility-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #f0f4f8;
+  transition: transform 0.3s ease;
+}
+
+.facility-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.facility-img-wrapper {
+  flex: 1;
+  min-height: 300px;
+}
+
+.facility-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.facility-info {
+  flex: 1.2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.facility-info h4 {
+  font-size: 1.4rem;
+  color: #2575fc;
+  margin-bottom: 15px;
+}
+
+.facility-info p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.tech-specs {
+  margin-top: 15px;
+  background: #f8fbff;
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 4px solid #2575fc;
+}
+
+/* --- COMBINED MOBILE OPTIMIZATION --- */
+
+@media (max-width: 992px) {
+  .hospital-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .hospital-features li {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hospital-section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* 1. Make Image Grid more compact on mobile */
+  .img-grid {
+    gap: 10px;
+  }
+
+  /* 2. Fix the Facility Cards for Mobile */
+  .facility-card, .facility-card:nth-child(even) {
+    flex-direction: column; /* Stack image on top of text */
+    margin-bottom: 10px;
+  }
+
+  .facility-img-wrapper {
+    min-height: 200px; /* Reduce image height on mobile to save scroll space */
+  }
+
+  .facility-info {
+    padding: 20px; /* Reduce bulky padding */
+  }
+
+  .facility-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .facility-info p {
+    font-size: 0.95rem;
+  }
+
+  .facilities-showcase {
+    margin-top: 50px;
+  }
+  
+  .tech-specs {
+    padding: 12px;
+  }
+  
+  .tech-specs p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  /* Show images in a single column so they aren't too tiny */
+  .img-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
